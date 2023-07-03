@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}
+Calculate page
+{% endblock %}
+{% block content %}
+    <form method="post">
+        <input type="number" name="firstnum" placeholder="первое число" required>
+        <input type="number" name="secondnum" placeholder="второе число" required>
+        <fieldset>
+            <legend>Select operation</legend>
+            <div>
+              <input type="radio" id="sum" name="operation" value="+">
+              <label for="sum"> + Сложить</label>
+            </div>
+
+            <div>
+              <input type="radio" id="sub" name="operation" value="-">
+              <label for="sub">- Вычесть</label>
+            </div>
+
+            <div>
+              <input type="radio" id="mul" name="operation" value="*">
+              <label for="mul">* Умножить</label>
+            </div>
+
+            <div>
+              <input type="radio" id="div" name="divoperation" value="/">
+              <label for="div">/ Разделить</label>
+            </div>
+        </fieldset>
+        <input type="submit" value="Посчитать">
+    </form>
+{% endblock %}
